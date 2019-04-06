@@ -1,0 +1,10 @@
+<h1>Chamados em aberto</h1>
+{% for Chamado in object_list %}
+	{% if Chamado.status == 'Aberto' %}
+		<div>
+			<h2>{{ Chamado.titulo }} </h2>
+			<p>Status: {{ Chamado.status | linebreaksbr }}</p>
+			<br>
+		</div>
+	{% endif %}
+{% endfor %}

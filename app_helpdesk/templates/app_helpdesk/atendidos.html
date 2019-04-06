@@ -1,0 +1,13 @@
+<h1>Todos os Chamados</h1>
+{% for Chamado in object_list %}
+		<div>
+			<h2>{{ Chamado.titulo }} </h2>
+            <p>Status: {{ Chamado.status | linebreaksbr }}</p>
+            <h3>Atendimentos:</h3>
+            <p>{{ Chamado.data | linebreaksbr }}</p>
+            {% for Atendimento in object_list %}
+            <p>{{ Atendimento.laudoAtendimento | linebreaksbr }}</p>
+            {% endfor %}
+			<br>
+		</div>
+{% endfor %}
